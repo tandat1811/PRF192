@@ -1,4 +1,4 @@
-#include <stdio.h>;
+#include <stdio.h>
 
 int main (){
 	float chuyenCan, giuaKy, cuoiKy;
@@ -21,7 +21,7 @@ int main (){
 	return 0;
 }
 
-	Tong =((chuyenCan * 0.1) + (giuaKy * 0.3) + (cuoiKy * 0.5));
+	Tong =((chuyenCan * 0.1) + (giuaKy * 0.3) + (cuoiKy * 0.6));
 	    if (Tong >= 8.5 && Tong <= 10)
         diemChu = 'A';
     else if (Tong >= 7.0 && Tong < 8.5)
