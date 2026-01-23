@@ -4,7 +4,7 @@ int main (){
 	float chuyenCan, giuaKy, cuoiKy;
 	float Tong;
 	char diemChu;
-	+
+	
 	printf("Nhap diem chuyen can: ");
 	if(scanf("%f",&chuyenCan) != 1){
 	printf("Khong tinh duoc!!");
