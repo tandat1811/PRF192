@@ -3,7 +3,7 @@
 int main (){
 	int money;
 	int sokwh;
-	printf("Nhap so kwh: ");
+	printf("Nhap so Kwh: ");
 	scanf ("%d", &sokwh);
 	if (sokwh<=100){
 		money = sokwh * 950;
