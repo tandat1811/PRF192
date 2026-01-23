@@ -7,17 +7,17 @@ int main (){
 	
 	printf("Nhap diem chuyen can: ");
 	if(scanf("%f",&chuyenCan) != 1){
-	printf("Khong tinh duoc!!");
+		printf("Khong tinh duoc!!");
 	return 0;
 }
 	printf("Nhap diem giua ky: ");
 	if(scanf("%f",&giuaKy) != 1){
-	printf("Khong tinh duoc!!");
+		printf("Khong tinh duoc!!");
 	return 0;
 }
 	printf("Nhap diem cuoi ky: ");
 	if(scanf("%f",&cuoiKy) != 1){
-	printf("Khong tinh duoc!!");
+		printf("Khong tinh duoc!!");
 	return 0;
 }
 
