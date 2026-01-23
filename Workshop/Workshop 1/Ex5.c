@@ -6,7 +6,7 @@ int main(){
 	float Money;
 	printf("Nhap so Km: ");
 	
-	if(scanf("%f", &soKm) != 1 || soKm<=0 ){
+	if(scanf("%f", &soKm) != 1 || soKm <= 0 ){
 		printf("Khong tinh duoc");
 		return 0;
 	}
