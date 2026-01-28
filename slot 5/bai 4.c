@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-int main (){
+int main() {
 	int money;
-	int sokwh;
+	int soKwh;
 	printf("Nhap so Kwh: ");
-	scanf ("%d", &sokwh);
-	if (sokwh<=100){
-		money = sokwh * 950;
-	} else if( sokwh <= 150 && sokwh > 100){
-		money = sokwh * 1250;
-	} else if( sokwh <= 200 && sokwh > 150){
-		money = sokwh * 1350;
+	scanf("%d", &soKwh);
+	if(soKwh <= 100) {
+		money = soKwh * 950;
+	} else if(soKwh <= 150) {
+		money = 100 * 950 + (soKwh - 100) * 1250;
+	} else if(soKwh <= 200) {
+		money = 100 * 950 + 50 * 1250 + (soKwh - 150) * 1350;
 	} else{
-		money = sokwh * 1550;
+		money = 100 * 950 + 50 * 1250 + 50 * 1350 + (soKwh - 200) * 1550;
 	}
-	printf("So tien can tra la: %d",money);
+	printf("So tien phai tra la: %d", money);
 	return 0;
 }
