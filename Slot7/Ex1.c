@@ -4,7 +4,8 @@ int main (){
 	int thang;
 	printf("nhap vao thang:");
 	int quy;
-	if(scanf("%d",&thang) !=1 || thang < 1 || thang > 12){
+	int kqua = scanf("%d",&thang);
+	if( kqua !=1 || thang < 1 || thang > 12){
 		printf("Nhap sai");
 		return 0;
 	}
