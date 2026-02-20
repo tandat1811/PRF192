@@ -4,9 +4,10 @@
 int main() {
 	int n;
 	long long kq = 0;
-	if(scanf("%d",&n) != 1){
-		printf("Nhap lai");
-		return 0;
+	printf("Nhap vao so thap phan:");
+	while(scanf("%d",&n) != 1){
+		printf("Nhap sai roi, hay nhap lai:");
+		while(getchar() != '\n');
 	}
 	
 	long long bac = 1;
