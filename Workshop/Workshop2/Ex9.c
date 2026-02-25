@@ -26,4 +26,3 @@ int main() {
 	printf("Ban da doan dung!");
 	return 0;
 }
-

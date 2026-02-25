@@ -1,19 +1,20 @@
 #include <stdio.h>
+#include <math.h>
 
-int main (){
-	int n;
-	int tong = 0;
-	do 	{
-		
-	while(printf("Nhap cac so nguyen duong n(nhap 0 de thoat):"), scanf("%d",&n) == 1 && n != 0){
-		if(n > 0){
-			tong = tong + n;
-		} else {
-			printf("Khong duoc tinh, nhap lai!!\n");
-		}
-	}
-	}while(n != 0);
-	printf("Tong cac so da tinh la:%d",tong);
-	
-	return 0;
+int main(){
+    float n;
+
+    for(int count = 0; count < 5; count++){
+
+        printf("Nhap n thu %d: ", count+1);
+
+        for( ; scanf("%f",&n)!=1 || n<=0 || n>1000 ; ){
+            printf("Nhap sai! Nhap lai: ");
+            fflush(stdin);
+        }
+
+        printf("Can bac 2 la: %.2f\n", sqrt(n));
+    }
+
+    return 0;
 }
