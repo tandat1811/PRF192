@@ -1,25 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
-    int n;
-    long long kq = 0;
+    int so_bi_mat, du_doan, so_lan = 7;
 
-    printf("Nhap vao so thap phan: ");
+    srand(time(NULL));
+    so_bi_mat = rand() % 100 + 1;
 
-    
-    for( ; scanf("%d",&n) != 1 ; ){
-        printf("Nhap sai roi, hay nhap lai:");
-        while(getchar() != '\n');
+    while (so_lan > 0) {
+        printf("Nhap so du doan (1-100): ");
+        scanf("%d", &du_doan);
+
+        if (du_doan < 1 || du_doan > 100) {
+            printf("So ngoai pham vi!\n");
+            continue;
+        }
+
+        if (du_doan == so_bi_mat) {
+            printf("Chuc mung! Ban doan dung!\n");
+            return 0;
+        }
+        else if (du_doan > so_bi_mat)
+            printf("So nho hon!\n");
+        else
+            printf("So lon hon!\n");
+
+        so_lan--;
+        printf("Con %d lan thu\n", so_lan);
     }
 
-    long long bac = 1;
-    
-    for( ; n > 0 ; n = n / 2 ){
-        int soDu = n % 2;
-        kq = kq + (soDu * bac);
-        bac = bac * 10;
-    }
-
-    printf("He nhi phan: %lld", kq);
+    printf("Ban thua! So dung la %d\n", so_bi_mat);
     return 0;
 }

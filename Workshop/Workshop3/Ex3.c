@@ -1,29 +1,22 @@
 #include <stdio.h>
 
-int main(){
-    int n;
+float tinh_luong(float so_gio, float luong_moi_gio) {
+    if (so_gio <= 40)
+        return so_gio * luong_moi_gio;
+    else
+        return 40 * luong_moi_gio + (so_gio - 40) * luong_moi_gio * 1.5;
+}
 
-   
-    for( ; ; ){
-        printf("Nhap n (1..10): ");
-        scanf("%d", &n);
+int main() {
+    float so_gio, luong_moi_gio;
 
-        if(n >= 1 && n <= 10)
-            break;
+    printf("Nhap so gio lam: ");
+    scanf("%f", &so_gio);
 
-        printf("Nhap sai! Nhap lai.\n");
-    }
+    printf("Nhap luong moi gio: ");
+    scanf("%f", &luong_moi_gio);
 
-    
-    printf("Cac so tu 1 den %d: ", n);
-    for(int i = 1; i <= n; i++){
-        printf("%d ", i);
-    }
-
-    printf("\nBang cuu chuong %d:\n", n);
-    for(int i = 1; i <= 10; i++){
-        printf("%d x %d = %d\n", n, i, n*i);
-    }
+    printf("Tong luong: %.0f VND\n", tinh_luong(so_gio, luong_moi_gio));
 
     return 0;
-}   
+}

@@ -1,20 +1,25 @@
-#include <stdio.h>
-#include <math.h>
+	#include <stdio.h>
 
-int main(){
-    float n;
+float tinh_tien_taxi(float so_km) {
+    if (so_km <= 1)
+        return 15000;
+    else if (so_km <= 30)
+        return 15000 + (so_km - 1) * 12000;
+    else
+        return 15000 + 29 * 12000 + (so_km - 30) * 10000;
+}
 
-    for(int count = 0; count < 5; count++){
+int main() {
+    float so_km;
 
-        printf("Nhap n thu %d: ", count+1);
+    printf("Nhap so kilomet: ");
+    scanf("%f", &so_km);
+    if(so_km < 0){
+    	printf("Khong hop le");
+    	return 0;
+	}
 
-        for( ; scanf("%f",&n)!=1 || n<=0 || n>1000 ; ){
-            printf("Nhap sai! Nhap lai: ");
-            fflush(stdin);
-        }
-
-        printf("Can bac 2 la: %.2f\n", sqrt(n));
-    }
+    printf("Tien phai tra: %.0f VND\n", tinh_tien_taxi(so_km));
 
     return 0;
 }
