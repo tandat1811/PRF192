@@ -12,16 +12,14 @@ int main() {
 	
 	char str[100], find, replace;
   int i, count = 0;
-
     scanf("%s", str);
 
-    getchar();
+	getchar();
   
   scanf("%c", &find);
   getchar();
   
   scanf("%c", &replace);
-    
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
@@ -35,8 +33,6 @@ int main() {
 
 		printf("%d\n", count);
     printf("%s", str);
-  
-  
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
   system ("pause");

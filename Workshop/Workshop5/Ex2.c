@@ -10,19 +10,22 @@ int main() {
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
   printf("\nINPUT:\n");
 		char str[100];
-    int i, len;
+    int i, len = 0;
+    fgets(str, 100, stdin);
 
-    
-    gets(str);
-
-    len = strlen(str);
+  	while (str[len] != '\0' && str[len] != '\n') {
+        len++;
+    }
   
   
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-  for(i=len-1; i>=0; --i)
-        printf("%c", str[i]);
+  
+  for(i=len-1; i>=0; --i){
+  	printf("%c", str[i]);
+	}
+        
   
   
   

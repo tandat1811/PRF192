@@ -4,7 +4,6 @@
 #include <math.h>
 #include <ctype.h>
 
-
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
@@ -13,7 +12,6 @@ int main() {
   	char str[100];
     int start, end, len;
 
-    
     scanf("%s", str);
 
     len = strlen(str);
@@ -34,10 +32,9 @@ int main() {
 
     printf("Yes\n");
   
-  
-  
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
   system ("pause");
   return(0);
 }
+

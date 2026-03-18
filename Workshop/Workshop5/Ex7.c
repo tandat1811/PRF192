@@ -4,37 +4,38 @@
 #include <math.h>
 #include <ctype.h>
 
-
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
   printf("\nINPUT:\n");
 
-   char c;
-    int num_digits = 0;
-    int num_letters = 0;
-    int num_others = 0;
-    
-    while((c=getchar())!='\n'){  
-        if(isdigit(c)) {         
-            num_digits++;
-        } else if(isalpha(c)) {  
-            num_letters++;
-        } else {                  
-            num_others++;
+		char c;
+    int digit = 0, letter = 0, other = 0;
+
+    while((c = getchar()) != '\n') {
+        if (isdigit(c)) {
+            digit++;
+        }
+        else if (isalpha(c)) {
+            letter++;
+        }
+        else {
+            other++;
         }
     }
     
-  
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
   
-    printf("%d\n%d\n%d", num_digits, num_letters, num_others);
-  
-  
+  	printf("%d\n", digit);
+    printf("%d\n", letter);
+    printf("%d\n", other);
+	
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
   system ("pause");
   return(0);
 }
+
+

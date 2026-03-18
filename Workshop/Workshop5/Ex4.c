@@ -12,7 +12,7 @@ int main() {
 
    char str[100];
     int i = 0;
-    int wordCount = 1;
+    int wordCount = 0;
     
      scanf("%[^\n]%*c", str);
   
@@ -20,16 +20,20 @@ int main() {
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
   
-   while(str[i] != '\0') {
-        if (str[i++] == ' ' && str[i] != ' ')
-            wordCount++;
-    }
 
-    printf("%d\n", wordCount);
-  
+    while(str[i] != '\0') {
+    if (str[i] != ' ' && (i == 0 || str[i-1] == ' ')) {
+        wordCount++;
+    }
+    i++;
+}
+
+    printf("%d", wordCount);
   
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
   system ("pause");
   return(0);
 }
+
+
